@@ -1,4 +1,4 @@
-package plug
+package hs1xxplug
 
 import (
 	"time"

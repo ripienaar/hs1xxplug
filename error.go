@@ -1,4 +1,4 @@
-package plug
+package hs1xxplug
 
 // Error represents an error message from the device, Code 0 is success
 type Error struct {
