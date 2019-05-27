@@ -14,7 +14,8 @@ type Info struct {
 	DeviceName      string     `json:"dev_name"`
 	Alias           string     `json:"alias"`
 	RelayState      PowerState `json:"relay_state"`
-	OnTime          int        `json:"on_time"`
+	OnTimeSeconds   int        `json:"on_time"`
+	OnTime          string     `json:"on_time_string"`
 	ActiveMode      string     `json:"active_mode"`
 	Features        string     `json:"feature"`
 	Updating        int        `json:"updating"`
@@ -54,6 +55,6 @@ func (h *Plug) Info() (info *Info, err error) {
 
 	info.On = info.RelayState == PowerOn
 	info.Off = info.RelayState == PowerOff
-
+	info.OnTime = secondsToHuman(info.OnTimeSeconds)
 	return info, err
 }
