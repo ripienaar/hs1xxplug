@@ -33,6 +33,7 @@ const (
 	PowerOn PowerState = 1
 )
 
+// Plug represents a management interface for a plug
 type Plug struct {
 	IPAddress string
 
