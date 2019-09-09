@@ -36,7 +36,7 @@ func (h *Plug) PowerOn() error {
 	}
 
 	if state != PowerOn {
-		return fmt.Errorf("power off was requested but device stayed on")
+		return fmt.Errorf("power on was requested but device stayed off")
 	}
 
 	return err
